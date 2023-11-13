@@ -9,20 +9,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit&family=Permanent+Marker&display=swap" rel="stylesheet">    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
-    <script type="text/javascript" src="js.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit&family=Orbitron:wght@400;500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">    <script type="text/javascript" src="5per.js"></script>
+    <script type="text/javascript" src="scripts/5per.js"></script>
 </head>
     <div class="topborder">COST CALCULATOR</div>
-    <body>
-        <form class="fiveperform" id="fiveperform">
-            <input placeholder="Person 1" id="pay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
-            <input placeholder="Person 2" id="pay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
-            <input placeholder="Person 3" id="pay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
-            <input placeholder="Person 4" id="pay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
-            <input placeholder="Person 5" id="pay5" name="pay5" class="numberbox" type="number" inputmode="numeric">
-            <button type="button" class="button" onclick="logic()">Submit</button>
-            <button type="button" class="button" onclick="reload()">Reset</button>
-
+    <body class="bgimage">
+        <form class="fiveperform" id="fiveperform"><span class="header">Input amount spent per person</span>
+                <input placeholder="Person 1" id="pay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 2" id="pay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 3" id="pay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 4" id="pay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 5" id="pay5" name="pay5" class="numberbox" type="number" inputmode="numeric">
+                <button type="button" class="button" onclick="logic()">Submit</button>
+                <button type="button" class="button" onclick="reload()">Reset</button>
             <p id="output5per" class="output" hidden></p>
         </form>
     </body>
