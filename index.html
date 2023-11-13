@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"/>
+    <script type="text/javascript" src="js.js"></script>
+</head>
+    <body>
+        <form class="fiveperform" id="fiveperform">
+            <input placeholder="Person 1" id="pay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
+            <input placeholder="Person 2" id="pay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
+            <input placeholder="Person 3" id="pay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
+            <input placeholder="Person 4" id="pay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
+            <input placeholder="Person 5" id="pay5" name="pay5" class="numberbox" type="number" inputmode="numeric">
+            <button type="button" class="button" onclick="logic()">Submit</button>
+            <button type="button" class="button" onclick="reload()">Reset</button>
+
+            <p id="output5per" class="output" hidden></p>
+        </form>
+    </body>
+</html>
