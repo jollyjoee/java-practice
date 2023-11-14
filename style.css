@@ -17,20 +17,14 @@ body {
     padding:0;
     overflow-x: hidden;
     overflow-y: hidden;
-    background-image:linear-gradient(rgb(78, 189, 241), #fff);
+    background-image:linear-gradient(rgb(26, 26, 26), #050505);
     font-family: 'Orbitron', sans-serif;
     font-weight: 400;
     font-size: 16px;
     overflow: scroll;
+    padding-bottom: 10vh;
 }
 
-.bgimage {
-  width: 100%;
-  background-image: url(assets/background.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 
 .topborder {
   margin-top: 0%;
@@ -54,15 +48,20 @@ body {
 }
 
 .header {
-  color: #c6d5e2;
-  font-size: 25px;
+  color: #000000;
+  font-size: 39px;
+  height: fit-content;
+  text-align: Center;
+  letter-spacing: 6px;
+  font-family: Anton;
+  font-weight: 600;
 }
 
 .fiveperform {
     align-self:center;
-    height: 150%;
-    width: 100%;
-    max-width: 600px;
+    height: fit-content;
+    width: 870px;
+    max-width: 700px;
     max-height: 1100px;
     margin-bottom: -100%;
     margin-top: 5%;
@@ -70,8 +69,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
-    background: linear-gradient(to bottom, #18121d8a, #31253a59);
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.856);
     border-radius: 10px;
     overflow: hidden;
     perspective: 1000px;
@@ -96,42 +95,55 @@ body {
   
   .numberbox {
     position: relative;
-    font-family: Orbitron;
-    font-size: 20px;
+    font-family: Anton;
+    height: 80px;
+    font-size: 27px;
     padding: 10px;
     border-radius: 3px;
     background-color: transparent;
     transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    color: #c6d5e2;
-    border: 2px solid #5e84a8;
+    color: #000000;
+    border: 2px solid #303030;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   }
   
   .numberbox::placeholder {
-    color: #c6d5e2;
+    color: #000000;
+    font-family: Anton;
+    font-size: 27px;
+    letter-spacing: 3px;
   }
   
   .numberbox:hover,
   .numberbox:focus {
     position: relative;
-    border-color: #a5b8ca;
+    border-color: #303030;
     background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1) rotateY(5deg);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     outline: none;
   }
-  
+  .buttons {
+    margin-top: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    height: auto;
+  }
   .button {
     position: relative;
     padding: 10px 20px;
+    height: 120px;
     border: none;
     border-radius: 3px;
-    background-color: #548fc7d8;
-    color: #182631;
+    background-color: rgb(112, 112, 112);
+    color: #2c2c2c;
     font-size: 36px;
-    font-family: Orbitron;
+    font-family: Anton;
+    letter-spacing: 6px;
+    text-transform: uppercase;
     font-weight: 700;
     cursor: pointer;
     transform-style: preserve-3d;
@@ -150,14 +162,16 @@ body {
   
   
   .output {
-    font-family: 'Kanit';
-    line-height: 1.7em;
+    font-family: Anton;
+    line-height: 1.9em;
     font-size: 25px;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    text-align: justify;
     text-wrap: wrap;
-    color: rgb(209, 209, 209);
+    color: rgb(0, 0, 0);
     border-color: aliceblue;
     animation: fadeIn 3s;
+    height: auto;
   }
 
   @keyframes fadeIn {

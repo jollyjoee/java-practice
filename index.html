@@ -13,19 +13,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit&family=Orbitron:wght@400;500;600;700;800;900&family=Permanent+Marker&family=Tourney:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">    <script type="text/javascript" src="scripts/5per.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit&family=Orbitron:wght@400;500;600;700;800;900&family=Permanent+Marker&family=Tourney:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">    
+    <script type="text/javascript" src="scripts/5per.js"></script>
 </head>
-    <div class="topborder">SHARE CALCULATOR</div>
-    <body class="bgimage">
+    
+    <body>
+        <div class="topborder">SHARE CALCULATOR</div>
         <form class="fiveperform" id="fiveperform"><span class="header">Input amount spent per person</span>
                 <input placeholder="Person 1" id="pay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
                 <input placeholder="Person 2" id="pay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
                 <input placeholder="Person 3" id="pay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
                 <input placeholder="Person 4" id="pay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
                 <input placeholder="Person 5" id="pay5" name="pay5" class="numberbox" type="number" inputmode="numeric">
-                <button type="button" class="button" onclick="logic()">Submit</button>
-                <button type="button" class="button" onclick="reload()">Reset</button>
-            <p id="output5per" class="output" hidden></p>
+                <div class="buttons">
+                    <button type="button" class="button" onclick="logic()">Submit</button>
+                    <button type="button" class="button" onclick="reload()">Reset</button>
+                </div>
+                <p id="output5per" class="output" hidden></p>
         </form>
     </body>
 </html>
