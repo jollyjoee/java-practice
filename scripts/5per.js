@@ -35,11 +35,14 @@ function logic(){
 
   let negativeTotal = 0;
   let negativeIndices = [];
+  let negPer = [];
 
   for (let i = 0; i < contrib.length; i++) {
   if (contrib[i] < 0) {
+      let negativePerson = `Person ${i + 1}: ${contrib[i]}`
       negativeTotal += contrib[i];
       negativeIndices.push(i);
+      negPer.push(negativePerson)
   }
   }
   let negativePer = negativeIndices.map((index, i) => `Person ${index + 1}`); //assigns a person number to each negative int
@@ -54,10 +57,14 @@ function logic(){
   }
   }
 
+  let negativeList = negPer.toString() 
+  negativeList = negativeList.replaceAll(',', '<br>')
+  negativeList = negativeList.concat('<br>')
   positivePer = positiveIndices.join(', ')
   negativeTotal = Math.abs(Math.round(negativeTotal * 1000) / 1000);
-  let finalOutput = negativePer.concat(' ', 'should combine their assigned costs amounting to:', ' ', negativeTotal, ' ', 'and give ', ' ', positivePer.toString())
+  let finalOutput = negativeList.concat(' ', 'The persons listed above should combine their assigned costs amounting to:', ' ', negativeTotal, ' ', 'and give ', ' ', positivePer.toString())
 
+  console.log(negativeList)
   /*
   console.log(paymentArray);
   console.log(paymentLogic);
