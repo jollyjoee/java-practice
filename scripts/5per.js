@@ -39,7 +39,7 @@ function logic(){
 
   for (let i = 0; i < contrib.length; i++) {
   if (contrib[i] < 0) {
-      let negativePerson = `Person ${i + 1}: ${contrib[i]}`
+      let negativePerson = `&#x2022; Person ${i + 1}: ${contrib[i]}`
       negativeTotal += contrib[i];
       negativeIndices.push(i);
       negPer.push(negativePerson)
@@ -52,7 +52,7 @@ function logic(){
 
   for (let i = 0; i < contrib.length; i++) {
   if (contrib[i] > 0) {
-      let personString = `Person ${i + 1}: ${contrib[i]}`;
+      let personString = `&#x2022; Person ${i + 1}: ${contrib[i]}`;
       positiveIndices.push(personString);
   }
   }
