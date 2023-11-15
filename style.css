@@ -22,7 +22,6 @@ body {
     font-weight: 400;
     font-size: 16px;
     overflow: scroll;
-    padding-bottom: 10vh;
 }
 
 
@@ -61,8 +60,8 @@ body {
     align-self:center;
     height: fit-content;
     width: 870px;
+    max-height: fit-content;
     max-width: 700px;
-    max-height: 1100px;
     margin-bottom: -100%;
     margin-top: 5%;
     position: relative;
