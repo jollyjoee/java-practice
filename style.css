@@ -18,7 +18,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     background-image:linear-gradient(rgb(26, 26, 26), #050505);
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Orbitron';
     font-weight: 400;
     font-size: 16px;
     overflow: scroll;
