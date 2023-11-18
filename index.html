@@ -14,22 +14,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit&family=Orbitron:wght@400;500;600;700;800;900&family=Permanent+Marker&family=Tourney:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">    
+    <script type="text/javascript" src="scripts/2per.js"></script>
+    <script type="text/javascript" src="scripts/3per.js"></script>
+    <script type="text/javascript" src="scripts/4per.js"></script>
     <script type="text/javascript" src="scripts/5per.js"></script>
+    <script type="text/javascript" src="scripts/6per.js"></script>
+    <script type="text/javascript" src="scripts/7per.js"></script>
+    <script type="text/javascript" src="scripts/select.js"></script>
 </head>
     
     <body>
-        <div class="topborder">SHARE CALCULATOR</div>
-        <form class="fiveperform" id="fiveperform"><span class="header">Input amount spent per person</span>
-                <input placeholder="Person 1" id="pay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
-                <input placeholder="Person 2" id="pay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
-                <input placeholder="Person 3" id="pay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
-                <input placeholder="Person 4" id="pay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
-                <input placeholder="Person 5" id="pay5" name="pay5" class="numberbox" type="number" inputmode="numeric">
+        <div class="header">
+            <ul>
+                <li><a href="#" aria-haspopup="true"># of people</a>
+                  <ul class="dropdown" aria-label="submenu">
+                    <li><a href="#" onclick="show2()">2</a></li>
+                    <li><a href="#" onclick="show3()">3</a></li>
+                    <li><a href="#" onclick="show4()">4</a></li>
+                    <li><a href="#" onclick="show5()">5</a></li>
+                    <li><a href="#" onclick="show6()">6</a></li>
+                    <li><a href="#" onclick="show7()">7</a></li>
+                  </ul>
+              </ul>
+        </div>
+        <div class="divform"  id="twoperform">
+            <form class="forms">
+                <input placeholder="Person 1" id="twopay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 2" id="twopay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
                 <div class="buttons">
-                    <button type="button" class="button" onclick="logic()">Submit</button>
-                    <button type="button" class="button" onclick="reload()">Reset</button>
+                    <button type="button" class="button" onclick="logic2()">Submit</button>
+                    <button type="button" class="button" onclick="reload2()">Reset</button>
+                </div>
+                <p id="output2per" class="output" hidden></p>
+            </form>
+        </div>
+        <div class="divform" id="threeperform" hidden>
+            <form class="forms">
+                <input placeholder="Person 1" id="threepay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 2" id="threepay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 3" id="threepay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
+                <div class="buttons">
+                    <button type="button" class="button" onclick="logic3()">Submit</button>
+                    <button type="button" class="button" onclick="reload3()">Reset</button>
+                </div>
+                <p id="output3per" class="output" hidden></p>
+            </form>
+        </div>
+        <div class="divform" id="fourperform" hidden>
+            <form class="forms">
+                <input placeholder="Person 1" id="fourpay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 2" id="fourpay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 3" id="fourpay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 4" id="fourpay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
+                <div class="buttons">
+                    <button type="button" class="button" onclick="logic4()">Submit</button>
+                    <button type="button" class="button" onclick="reload4()">Reset</button>
+                </div>
+                <p id="output4per" class="output" hidden></p>
+            </form>
+        </div>
+        <div class="divform" id="fiveperform" hidden>
+            <form class="forms">
+                <input placeholder="Person 1" id="fivepay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 2" id="fivepay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 3" id="fivepay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 4" id="fivepay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 5" id="fivepay5" name="pay5" class="numberbox" type="number" inputmode="numeric">
+                <div class="buttons">
+                    <button type="button" class="button" onclick="logic5()">Submit</button>
+                    <button type="button" class="button" onclick="reload5()">Reset</button>
                 </div>
                 <p id="output5per" class="output" hidden></p>
-        </form>
+            </form>
+        </div>
+        <div class="divform" id="sixperform" hidden>
+            <form class="forms">
+                <input placeholder="Person 1" id="sixpay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 2" id="sixpay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 3" id="sixpay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 4" id="sixpay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 5" id="sixpay5" name="pay5" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 6" id="sixpay6" name="pay5" class="numberbox" type="number" inputmode="numeric">
+                <div class="buttons">
+                    <button type="button" class="button" onclick="logic6()">Submit</button>
+                    <button type="button" class="button" onclick="reload6()">Reset</button>
+                </div>
+                <p id="output6per" class="output" hidden></p>
+            </form>
+        </div>
+        <div class="divform" id="sevenperform" hidden>
+            <form class="forms">
+                <input placeholder="Person 1" id="sevenpay1" name="pay1" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 2" id="sevenpay2" name="pay2" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 3" id="sevenpay3" name="pay3" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 4" id="sevenpay4" name="pay4" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 5" id="sevenpay5" name="pay5" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 6" id="sevenpay6" name="pay5" class="numberbox" type="number" inputmode="numeric">
+                <input placeholder="Person 7" id="sevenpay7" name="pay5" class="numberbox" type="number" inputmode="numeric">
+                <div class="buttons">
+                    <button type="button" class="button" onclick="logic7()">Submit</button>
+                    <button type="button" class="button" onclick="reload7()">Reset</button>
+                </div>
+                <p id="output7per" class="output" hidden></p>
+            </form>
+        </div>
     </body>
 </html>

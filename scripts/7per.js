@@ -1,11 +1,13 @@
 
-function logic5(){
+function logic7(){
   const payElements = [
-      document.querySelector("#fivepay1"),
-      document.querySelector("#fivepay2"),
-      document.querySelector("#fivepay3"),
-      document.querySelector("#fivepay4"),
-      document.querySelector("#fivepay5"),
+      document.querySelector("#sevenpay1"),
+      document.querySelector("#sevenpay2"),
+      document.querySelector("#sevenpay3"),
+      document.querySelector("#sevenpay4"),
+      document.querySelector("#sevenpay5"),
+      document.querySelector("#sevenpay6"),
+      document.querySelector("#sevenpay7"),
     ];
     
   let paymentArray = [];
@@ -25,7 +27,7 @@ function logic5(){
   function sum(total, num) {
       return total + num
   };
-  const perMemCost = groupTotal / 5 //divides all expenses by 5
+  const perMemCost = groupTotal / 7 //divides all expenses by 7
 
   const contrib = paymentArray.map(function(element){ //rounds each index to the nearest hundredths
       return Math.round((element - perMemCost) * 100) / 100;
@@ -78,16 +80,16 @@ function logic5(){
   //console.log(positivePer)
   console.log(negativePer, ' ', 'should combine their assigned costs amounting to:', ' ', negativeTotal, ' ', 'and give', ' ', positivePer.toString())
 */
-  document.querySelector('#output5per').innerHTML = finalOutput;
-  document.querySelector('#output5per').removeAttribute("hidden");
+  document.querySelector('#output7per').innerHTML = finalOutput;
+  document.querySelector('#output7per').removeAttribute("hidden");
 }
 
-function reload5(){
-  var container = document.getElementById("fiveperform");
+function reload7(){
+  var container = document.getElementById("sevenperform");
   var content = container.innerHTML;
   container.innerHTML= content; 
   
-  document.querySelector('#output5per').setAttribute("hidden", "true");
+  document.querySelector('#output7per').setAttribute("hidden", "true");
  //this line is to watch the result in console , you can remove it later	
   console.log("Refreshed"); 
 }

@@ -2,26 +2,107 @@ html, body, * {
     -webkit-app-region: drag;
     -webkit-user-select: none;
     cursor: default;
-    height: 55%;
+    height: 100%;
+    font-family: Orbitron, Kanit, Tourney;
 }
 
 body {
-    display: flex;
+    text-align: center;
+    display: flexbox;
     flex-direction: column;
-    align-content: space-around;
-    box-sizing: border-box;
-    height: 100%;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    min-width: fit-content;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     padding:0;
-    overflow-x: hidden;
-    overflow-y: hidden;
     background-image:linear-gradient(rgb(26, 26, 26), #050505);
-    font-family: 'Orbitron';
-    font-weight: 400;
-    font-size: 16px;
-    overflow: scroll;
+    overflow-y: auto;
+}
+
+.header {
+  position: relative;
+  padding-left: 2vh;
+  padding-right: 10vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  height: 3.3vh;
+  width: 100%;
+  margin-bottom: 3vh;
+  background-color: rgb(255, 255, 255);
+}
+
+ul {
+  min-width: 5.8vh;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  width: 5.8vh;
+  height: fit-content;
+  font-size: 30px;
+  z-index: 9999;
+}
+
+li {
+  float: left;
+  margin-top: -.5rem;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  width: 10rem;
+}
+  
+li a {
+  color: #111111;
+  font-family: Kanit;
+  cursor: pointer;
+  text-decoration: none;
+ 
+}
+
+li:hover,
+li:focus-within {
+  outline: rgba(104, 104, 104, 0.493) solid 2px;
+  cursor: pointer;
+  transform: none;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+  background: rgba(73, 73, 73, 0.534);
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5.2rem;
+  position: absolute;
+  transition: all 0.1s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 4.25vh;
+}
+
+ul li ul li a {
+  text-align: center;
+  text-decoration: none;
 }
 
 
@@ -46,26 +127,13 @@ body {
     display:none;
 }
 
-.header {
-  color: #000000;
-  font-size: 39px;
-  height: fit-content;
-  text-align: Center;
-  letter-spacing: 6px;
-  font-family: Anton;
-  font-weight: 600;
-}
-
-.fiveperform {
-    align-self:center;
+.forms {
     height: fit-content;
-    width: 870px;
+    width: 600px;
     max-height: fit-content;
     max-width: 700px;
-    margin-bottom: -100%;
-    margin-top: 5%;
     position: relative;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     gap: 10px;
     padding: 15px;
@@ -97,7 +165,9 @@ body {
     font-family: Anton;
     height: 80px;
     font-size: 27px;
+    width: 96%;
     padding: 10px;
+    margin-bottom: 2%;
     border-radius: 3px;
     background-color: transparent;
     transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -125,7 +195,7 @@ body {
     outline: none;
   }
   .buttons {
-    margin-top: 19px;
+    margin-top: 2px;
     display: flex;
     flex-direction: column;
     gap: 1em;
