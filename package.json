@@ -11,5 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "electron": "^27.0.4"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.0.0",
+    "electron-packager": "^17.1.2"
   }
 }

@@ -20,14 +20,18 @@ body {
     padding:0;
     background-image:linear-gradient(rgb(26, 26, 26), #050505);
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 9999999999999;
   padding-left: 2vh;
   padding-right: 10vh;
   padding-top: 1vh;
   padding-bottom: 1vh;
+  margin-top: 0px;
   height: 3.3vh;
   width: 100%;
   margin-bottom: 3vh;

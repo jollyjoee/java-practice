@@ -65,7 +65,7 @@ function logic7(){
   positivePer = positiveIndices.join('<br>')
   negativeTotal = Math.abs(Math.round(negativeTotal * 1000) / 1000);
   let startString = 'The total group expense is (Sum of all expenses):';
-  let finalOutput = startString.concat(' ', groupTotal, '<br><br> Each member\'s equal cost (x) is calculated by adding all expenses and dividing it by the number of people (Group\'s Total/5): ', perMemCost, '<br><br>', 'Each person\'s contribution is calculated by: Amount Spent = y => (y-x) (negative value people give positive value people their contribution) which are listed below:<br>', negativeList, '<br>The persons listed above should combine their contributions amounting to:', ' ', negativeTotal, ' ', 'and give:<br>', ' ', positivePer.toString())
+  let finalOutput = startString.concat(' ', groupTotal, '<br><br> Each member\'s equal cost (x) is calculated by adding all expenses and dividing it by the number of people (Group\'s Total/7): ', perMemCost, '<br><br>', 'Each person\'s contribution is calculated by: Amount Spent = y => (y-x) (negative value people give positive value people their contribution) which are listed below:<br>', negativeList, '<br>The persons listed above should combine their contributions amounting to:', ' ', negativeTotal, ' ', 'and give:<br>', ' ', positivePer.toString())
 
   console.log(negativeList)
   /*
