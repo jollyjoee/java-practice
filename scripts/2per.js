@@ -42,6 +42,13 @@ function logic2(){
       negPer.push(negativePerson)
   }
   }
+  const names = ["Test","Testt"]
+  let namedIndex = [];
+  for (let i = 0; i < negativeIndices.length; i++) {
+    let tets = names.at(i);
+    namedIndex.push(tets)
+  }
+
   let negativePer = negativeIndices.map((index, i) => `Person ${index + 1}`); //assigns a person number to each negative int
   negativePer = negativePer.join(', ');
 
@@ -62,17 +69,19 @@ function logic2(){
   let startString = 'The total group expense is (Sum of all expenses):';
   let finalOutput = startString.concat(' ', groupTotal, '<br><br> Each member\'s equal cost (x) is calculated by adding all expenses and dividing it by the number of people (Group\'s Total/5): ', perMemCost, '<br><br>', 'Each person\'s contribution is calculated by: Amount Spent = y => (y-x) (negative value people give positive value people their contribution) which are listed below:<br>', negativeList, '<br>The persons listed above should combine their contributions amounting to:', ' ', negativeTotal, ' ', 'and give:<br>', ' ', positivePer.toString())
 
-  console.log(negativeList)
+  //console.log(negativeList)
+  console.log(namedIndex)
+  console.log(negativeIndices)
+  //console.log(negativePer)
   /*
   console.log(paymentArray);
   console.log(paymentLogic);
   console.log(division);
   console.log(contrib);
-  console.log(negativeIndices)
-  console.log(negativePer)
+  
   console.log(positiveIndices)
   console.log(negativeTotal)
-  //console.log(positivePer)
+  console.log(positivePer)
   console.log(negativePer, ' ', 'should combine their assigned costs amounting to:', ' ', negativeTotal, ' ', 'and give', ' ', positivePer.toString())
 */
   document.querySelector('#output2per').innerHTML = finalOutput;
@@ -85,6 +94,6 @@ function reload2(){
   container.innerHTML= content; 
   
   document.querySelector('#output2per').setAttribute("hidden", "true");
- //this line is to watch the result in console , you can remove it later	
+ //this line is to watch the result in console 
   console.log("Refreshed"); 
 }

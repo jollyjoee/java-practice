@@ -3,6 +3,7 @@ html, body, * {
     -webkit-user-select: none;
     cursor: default;
     height: 100%;
+    width: 100%;
     font-family: Orbitron, Kanit, Tourney;
 }
 
@@ -129,6 +130,11 @@ ul li ul li a {
 
 .numberbox::-webkit-inner-spin-button {
     display:none;
+}
+
+.divform{
+  margin: auto;
+  width: 45%;
 }
 
 .forms {
