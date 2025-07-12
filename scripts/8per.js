@@ -8,6 +8,7 @@ function logic7(){
       document.querySelector("#sevenpay5"),
       document.querySelector("#sevenpay6"),
       document.querySelector("#sevenpay7"),
+      document.querySelector("#sevenpay8"),
     ];
     
   let paymentArray = [];
