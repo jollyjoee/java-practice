@@ -48,3 +48,12 @@ function show7() {
     document.querySelector('#sixperform').setAttribute("hidden", true);
     document.querySelector('#sevenperform').removeAttribute("hidden");
 }
+function show8() {
+    document.querySelector('#twoperform').setAttribute("hidden", true);
+    document.querySelector('#threeperform').setAttribute("hidden", true);
+    document.querySelector('#fourperform').setAttribute("hidden", true);
+    document.querySelector('#fiveperform').setAttribute("hidden", true);
+    document.querySelector('#sixperform').setAttribute("hidden", true);
+    document.querySelector('#sevenperform').setAttribute("hidden")
+    document.querySelector('#eightperform').RemoveAttribute("hidden");
+}
