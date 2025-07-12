@@ -1,5 +1,5 @@
 
-function logic7(){
+function logic8(){
   const payElements = [
       document.querySelector("#sevenpay1"),
       document.querySelector("#sevenpay2"),
@@ -28,7 +28,7 @@ function logic7(){
   function sum(total, num) {
       return total + num
   };
-  const perMemCost = groupTotal / 7 //divides all expenses by 7
+  const perMemCost = groupTotal / 8 //divides all expenses by 7
 
   const contrib = paymentArray.map(function(element){ //rounds each index to the nearest hundredths
       return Math.round((element - perMemCost) * 100) / 100;
@@ -85,7 +85,7 @@ function logic7(){
   document.querySelector('#output7per').removeAttribute("hidden");
 }
 
-function reload7(){
+function reload8(){
   var container = document.getElementById("sevenperform");
   var content = container.innerHTML;
   container.innerHTML= content; 
